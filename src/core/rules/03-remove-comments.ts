@@ -1,0 +1,1 @@
+import type {Rule} from "../types.js";import {tokenize} from "../syntax.js";export const removeCommentsRule:Rule={id:"03-remove-comments",name:"Remove all comments",apply(code,c){return tokenize(code,c.language).map(t=>t.kind==="comment"?" ":t.text).join("");}};

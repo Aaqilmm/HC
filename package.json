@@ -1,0 +1,33 @@
+{
+  "name": "humancode",
+  "version": "2.3.0",
+  "private": true,
+  "type": "module",
+  "description": "HumanCode deployment-ready MCP app backend for standalone coding-problem solutions",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "test": "npm run build && node --test dist/tests/*.test.js",
+    "start": "node dist/mcp/server.js",
+    "start:http": "node dist/mcp/server.js --http",
+    "start:http:local": "HOST=127.0.0.1 node dist/mcp/server.js --http",
+    "smoke": "node verification/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "@modelcontextprotocol/node": "^2.0.0",
+    "tree-sitter": "0.25.0",
+    "tree-sitter-cpp": "0.23.4",
+    "tree-sitter-java": "0.23.5",
+    "tree-sitter-javascript": "0.25.0",
+    "tree-sitter-python": "0.25.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3"
+  }
+}
