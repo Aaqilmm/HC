@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist-core",
+    "types": []
+  },
+  "include": [
+    "src/core/**/*.ts",
+    "src/tests/core/**/*.ts",
+    "verification/node-stubs.d.ts"
+  ]
+}
